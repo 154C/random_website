@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tierarztpraxis Am Bächli – Für das Wohl Ihrer Liebsten</title>
+    <style>
+        :root {
+            --primary: #2c7a7b; /* Beruhigendes Teal/Grünblau */
+            --secondary: #edf2f7;
+            --accent: #e53e3e; /* Für Notfälle */
+            --text: #2d3748;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #f7fafc;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn-emergency {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-emergency:hover {
+            background-color: #c53030;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 122, 123, 0.1), rgba(44, 122, 123, 0.2)), url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #1a202c;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        /* Container für Abschnitte */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+            position: relative;
+        }
+
+        /* Leistungen Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid var(--primary);
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">🐾 Tierarztpraxis Am Bächli</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Startseite</a></li>
+                    <li><a href="#leistungen">Leistungen</a></li>
+                    <li><a href="#team">Über uns</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="#notfall" class="btn-emergency">NOTFALL</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Herzlich willkommen in unserer Praxis</h1>
+            <p>Mit viel Herz und Fachkompetenz für die Gesundheit Ihres Tieres.</p>
+        </div>
+    </section>
+
+    <section id="leistungen" class="section">
+        <h2>Unsere Leistungen</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Vorsorge & Impfungen</h3>
+                <p>Individuelle Beratung, Schutzimpfungen und Gesundheits-Checks für ein langes Tierleben.</p>
+            </div>
+            <div class="service-card">
+                <h3>Innere Medizin</h3>
+                <p>Moderne Diagnostik (Ultraschall, Labor, Röntgen) direkt bei uns in der Praxis.</p>
+            </div>
+            <div class="service-card">
+                <h3>Weichteilchirurgie</h3>
+                <p>Sichere Operationen und Kastrationen unter modernster Narkoseüberwachung.</p>
+            </div>
+            <div class="service-card">
+                <h3>Zahnheilkunde</h3>
+                <p>Professionelle Zahnreinigung und Zahnbehandlungen für ein strahlendes Gebiss.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section" style="background-color: #edf2f7;">
+        <h2>Unser Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400" alt="Tierärztin">
+                <h3>Dr. med. vet. Anna Meier</h3>
+                <p>Inhaberin & Tierärztin</p>
+            </div>
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=400" alt="TPA">
+                <h3>Sarah Müller</h3>
+                <p>Tiermedizinische Praxisassistentin</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="section">
+        <h2>Kontakt & Öffnungszeiten</h2>
+        <div class="contact-container">
+            <div class="info-box">
+                <h3>Öffnungszeiten</h3>
+                <br>
+                <p><strong>Montag - Freitag:</strong> 08:00 - 12:00 | 14:00 - 18:00 Uhr</p>
+                <p><strong>Samstag:</strong> 09:00 - 12:00 Uhr (nach Vereinbarung)</p>
+            </div>
+            <div class="info-box">
+                <h3>So finden Sie uns</h3>
+                <br>
+                <p>Tierarztpraxis Am Bächli</p>
+                <p>Tierstrasse 12, 8000 Zürich</p>
+                <p><strong>Telefon:</strong> 044 123 45 67</p>
+                <p><strong>E-Mail:</strong> info@tierarztpraxis-baechli.ch</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="notfall" class="section" style="background-color: #fff5f5; border-left: 8px solid var(--accent);">
+        <h2>Notfall</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p>Ausserhalb unserer Öffnungszeiten wenden Sie sich in dringenden Notfällen bitte an die Notfallklinik der Region:</p>
+            <br>
+            <h3 style="color: var(--accent); font-size: 24px;">Notfall-Telefon: 0900 111 222</h3>
+            <br>
+            <p><em>Bitte rufen Sie immer zuerst an, bevor Sie losfahren, damit das medizinische Team vorbereitet ist.</em></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Tierarztpraxis Am Bächli. Alle Rechte vorbehalten. | Impressum & Datenschutz</p>
+    </footer>
+
+</body>
+</html>
